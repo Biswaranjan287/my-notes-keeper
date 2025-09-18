@@ -63,7 +63,7 @@ const ViewPaste = () => {
             placeholder="Write Your Content Here...."
             className="w-full p-3 text-gray-200 bg-gray-800 focus-visible:ring-0"
             style={{
-              caretColor: "#000",
+              caretColor: "",
             }}
             rows={20}
           />

@@ -35,7 +35,7 @@ const Paste = () => {
 
         {/* All Pastes */}
         <div className="flex flex-col bg-gray-800 border border-[rgba(128,121,121,0.3)] py-4 rounded-[0.4rem]">
-          <h2 className="px-4 text-4xl text-white font-bold border-b border-[rgba(128,121,121,0.3)] pb-4 ">
+          <h2 className="px-4 text-xl md:text-4xl text-white font-bold border-b border-[rgba(128,121,121,0.3)] pb-4 ">
             All Pastes
           </h2>
           <div className="w-full text-gray-300 px-4 pt-4 flex flex-col gap-y-5">
@@ -107,7 +107,7 @@ const Paste = () => {
                 </div>
               ))
             ) : (
-              <div className="text-2xl text-center w-full text-chileanFire-500">
+              <div className="text-2xl text-center w-full text-chileanFire-500 ">
                 No Data Found
               </div>
             )}
