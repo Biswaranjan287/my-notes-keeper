@@ -36,7 +36,7 @@ const Paste = () => {
         {/* All Pastes */}
         <div className="flex flex-col bg-gray-800 border border-[rgba(128,121,121,0.3)] py-4 rounded-[0.4rem]">
           <h2 className="px-4 text-xl md:text-4xl text-white font-bold border-b border-[rgba(128,121,121,0.3)] pb-4 ">
-            All Pastes
+            All Notes
           </h2>
           <div className="w-full text-gray-300 px-4 pt-4 flex flex-col gap-y-5">
             {filteredPastes.length > 0 ? (
@@ -47,8 +47,8 @@ const Paste = () => {
                 >
                   {/* heading and Description */}
                   <div className="w-[50%] flex flex-col space-y-3">
-                    <p className="text-4xl font-semibold ">{paste?.title}</p>
-                    <p className="text-sm font-normal line-clamp-3 max-w-[80%] text-[#707070]">
+                    <p className="text-xl md:text-2xl font-semibold ">{paste?.title}</p>
+                    <p className="text-sm font-normal line-clamp-3 text-gray-400">
                       {paste?.content}
                     </p>
                   </div>
@@ -57,36 +57,35 @@ const Paste = () => {
                   <div className="flex flex-col gap-y-4 sm:items-end">
                     <div className="flex gap-2 flex-wrap sm:flex-nowrap">
                       <button
-                        className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-blue-500"
-                        // onClick={() => toast.error("Not working")}
+                        className="p-1 rounded-sm bg-white border border-gray-300 hover:bg-transparent group hover:border-blue-500"
                       >
                         <a href={`/?pasteId=${paste?._id}`}>
                           <PencilLine
                             className="text-black group-hover:text-blue-500"
-                            size={20}
+                            size={16} // Small size for all devices
                           />
                         </a>
                       </button>
                       <button
-                        className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-pink-500"
+                        className="p-1 rounded-sm bg-white border border-gray-300 hover:bg-transparent group hover:border-pink-500"
                         onClick={() => handleDelete(paste?._id)}
                       >
                         <Trash2
                           className="text-black group-hover:text-pink-500"
-                          size={20}
+                          size={16} // Small size for all devices
                         />
                       </button>
 
-                      <button className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-orange-500">
+                      <button className="p-1 rounded-sm bg-white border border-gray-300 hover:bg-transparent group hover:border-orange-500">
                         <a href={`/pastes/${paste?._id}`} target="_blank">
                           <Eye
                             className="text-black group-hover:text-orange-500"
-                            size={20}
+                            size={16} // Small size for all devices
                           />
                         </a>
                       </button>
                       <button
-                        className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-green-500"
+                        className="p-1 rounded-sm bg-white border border-gray-300 hover:bg-transparent group hover:border-green-500"
                         onClick={() => {
                           navigator.clipboard.writeText(paste?.content);
                           toast.success("Copied to Clipboard");
@@ -94,20 +93,22 @@ const Paste = () => {
                       >
                         <Copy
                           className="text-black group-hover:text-green-500"
-                          size={20}
+                          size={16} // Small size for all devices
                         />
                       </button>
                     </div>
 
-                    <div className="gap-x-2 flex ">
-                      <Calendar className="text-gray-200" size={20} />
-                      {FormatDate(paste?.createdAt)}
+                    <div className="flex gap-x-2 text-sm items-center">
+                      <Calendar className="text-gray-400" size={16} /> {/* Small size for all devices */}
+                      <span>
+                        {FormatDate(paste?.createdAt)}
+                      </span>
                     </div>
                   </div>
                 </div>
               ))
             ) : (
-              <div className="text-2xl text-center w-full text-chileanFire-500 ">
+              <div className="lg:text-2xl sm:text-sm text-center w-full text-chileanFire-500">
                 No Data Found
               </div>
             )}

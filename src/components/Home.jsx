@@ -75,14 +75,14 @@ const Home = () => {
               } text-white bg-gray-800 outline-none border border-none rounded-md p-2`}
           />
           <button
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700"
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-3 sm:px-5 py-2 sm:py-2.5 me-1 sm:me-2 mb-1 sm:mb-2 dark:bg-blue-600 dark:hover:bg-blue-700"
             onClick={createPaste}
           >
             {pasteId ? "Update Notes" : "Create My Notes"}
           </button>
 
           {pasteId && <button
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700"
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-3 sm:px-5 py-2 sm:py-2.5 me-1 sm:me-2 mb-1 sm:mb-2 dark:bg-blue-600 dark:hover:bg-blue-700"
             onClick={resetPaste}
           >
             <PlusCircle size={20} />
