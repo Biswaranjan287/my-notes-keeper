@@ -22,7 +22,7 @@ const ViewPaste = () => {
           placeholder="Title"
           value={paste.title}
           disabled
-          className="w-full text-black border border-input rounded-md p-2"
+          className="w-full text-gray-200 bg-gray-800 rounded-md p-2"
         />
         <div
           className={`w-full flex flex-col items-start relative rounded bg-opacity-10 border border-[rgba(128,121,121,0.3)] backdrop-blur-2xl`}
@@ -61,7 +61,7 @@ const ViewPaste = () => {
             value={paste.content}
             disabled
             placeholder="Write Your Content Here...."
-            className="w-full p-3  focus-visible:ring-0"
+            className="w-full p-3 text-gray-200 bg-gray-800 focus-visible:ring-0"
             style={{
               caretColor: "#000",
             }}

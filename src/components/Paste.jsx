@@ -26,7 +26,7 @@ const Paste = () => {
         <div className="w-full flex gap-3 px-4 py-2 bg-gray-800 rounded-[0.3rem] border border-[rgba(128,121,121,0.3)]  mt-6">
           <input
             type="search"
-            placeholder="Search paste here..."
+            placeholder="Search notes here..."
             className="focus:outline-none w-full bg-transparent"
             value={searchTerm} // Bind the input to searchTerm state
             onChange={(e) => setSearchTerm(e.target.value)} // Update searchTerm on input change
@@ -35,7 +35,7 @@ const Paste = () => {
 
         {/* All Pastes */}
         <div className="flex flex-col bg-gray-800 border border-[rgba(128,121,121,0.3)] py-4 rounded-[0.4rem]">
-          <h2 className="px-4 text-4xl text-white font-bold border-b border-[rgba(128,121,121,0.3)] pb-4">
+          <h2 className="px-4 text-4xl text-white font-bold border-b border-[rgba(128,121,121,0.3)] pb-4 ">
             All Pastes
           </h2>
           <div className="w-full text-gray-300 px-4 pt-4 flex flex-col gap-y-5">

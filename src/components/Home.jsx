@@ -130,7 +130,7 @@ const Home = () => {
             placeholder="Write Your Content Here...."
             className="w-full p-3 bg-gray-800 text-white focus-visible:ring-0 resize-none outline-none"
             style={{
-              caretColor: "#000",
+              caretColor: "",
             }}
             rows={20}
           />

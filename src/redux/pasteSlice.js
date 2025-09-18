@@ -25,8 +25,6 @@ const pasteSlice = createSlice({
       
       // Update to localstorage
       localStorage.setItem("pastes", JSON.stringify(state.pastes))
-      // show toast
-      toast.success("Notes added")
     },
 
     updatePastes: (state, action) => {
@@ -38,8 +36,6 @@ const pasteSlice = createSlice({
         state.pastes[index] = paste
         // Update to localstorage
         localStorage.setItem("pastes", JSON.stringify(state.pastes))
-        // show toast
-        toast.success("Paste updated")
       }
     },
     removeFromPastes: (state, action) => {
